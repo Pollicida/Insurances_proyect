@@ -1,0 +1,29 @@
+---
+import Image from "astro/components/Image.astro";
+import logo from "../../public/favicon.svg"
+---
+
+<header class="w-screen h-12 bg-white">
+
+    <!--Desktop design--->
+    <div class="hidden md:block">
+        <a href="/">
+            <Image src={logo} alt="Logo" width="50" height="50" />
+        </a>
+    </div>
+    <nav class="hidden md:block">
+        <ul>
+            <li>Inicio</li>
+            <li>Seguros</li>
+            <li>Nuestros empleados</li>
+            <li>Contactanos</li>
+        </ul>
+    </nav>
+    <!----->
+
+    <!--Movile design--->
+    <div>
+        
+    </div>
+
+</header>
