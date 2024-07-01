@@ -1,18 +1,19 @@
 ---
 import Image from "astro/components/Image.astro";
 import logo from "../../public/favicon.svg"
+import AppBar from "./mainPage/AppBar";
 ---
 
-<header class="w-screen h-12 bg-white">
+<header class="w-screen h-12 bg-black md:flex md:items-center">
 
     <!--Desktop design--->
-    <div class="hidden md:block">
+    <div class="hidden md:block w-[5em]">
         <a href="/">
-            <Image src={logo} alt="Logo" width="50" height="50" />
+            <Image src={logo} alt="Logo" width="50" height="50"/>
         </a>
     </div>
     <nav class="hidden md:block">
-        <ul>
+        <ul class="text-white flex">
             <li>Inicio</li>
             <li>Seguros</li>
             <li>Nuestros empleados</li>
@@ -22,8 +23,8 @@ import logo from "../../public/favicon.svg"
     <!----->
 
     <!--Movile design--->
-    <div>
-        
+    <div class="md:hidden h-full">
+        <AppBar client:only="react"/>
     </div>
 
 </header>

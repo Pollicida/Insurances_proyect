@@ -4,12 +4,21 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 export default function AppBar() {
 
+    const drawerWidth = 240;
+    const navItems = ['Inicio', 'Acerca de nosotros', 'Contacto'];
+
+    const [mobileOpen, setMobileOpen] = useState(false);
+
+    const handleDrawerToggle = () => {
+        setMobileOpen((prevState) => !prevState);
+    };
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
           <Typography variant="h6" sx={{ my: 2 }}>
             Menú
           </Typography>
-          <Divider />
+          <hr />
           <List>
             {navItems.map((item) => (
               <ListItem key={item} disablePadding>
@@ -19,7 +28,7 @@ export default function AppBar() {
               </ListItem>
             ))}
           </List>
-          <Divider />
+          {/* <Divider />
         <List>
             {['Cerrar sesión'].map((text, index) => (
             <ListItem key={text} disablePadding>
@@ -28,7 +37,7 @@ export default function AppBar() {
                 </ListItemButton>
             </ListItem>
             ))}
-        </List>
+        </List> */}
         </Box>
       );
 
@@ -50,12 +59,11 @@ export default function AppBar() {
 
             <div className="w-full h-full flex items-center justify-center lg:hidden">
                 <IconButton
-                    className="text-white lg:hidden"
+                    className="lg:hidden"
                     aria-label="open drawer"
-                    edge="start"
                     onClick={handleDrawerToggle}
                 >
-                    <MenuIcon />
+                <MenuIcon className="text-white"/>
                 </IconButton>
             </div>
         </>
