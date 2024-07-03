@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Image from 'astro/components/Image.astro';
+import pruebaImagen from "../../public/fotoPrueba.png";
 ---
 
 <Layout title="Kuxtal | Inicio">
-	<h1>Esta es la pagina de inicio</h1>
+	<div class="relative">
+		<div class="absolute w-full h-full opacity-40 bg-slate-400"></div>
+		<Image src={pruebaImagen} alt="Foto de prueba" class="w-screen h-screen" quality={100} loading="eager"/>
+	</div>
 </Layout>

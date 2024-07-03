@@ -63,7 +63,7 @@ export default function AppBar() {
                     aria-label="open drawer"
                     onClick={handleDrawerToggle}
                 >
-                <MenuIcon className="text-white"/>
+                <MenuIcon className="text-black"/>
                 </IconButton>
             </div>
         </>
